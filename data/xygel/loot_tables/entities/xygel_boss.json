@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:slime_ball",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Núcleo de Slime Primordial\",\"color\":\"green\"}',Lore:['{\"text\":\"Parte do núcleo de Xy\\'Gel\",\"color\":\"dark_green\"}']},slimeboss:1b,Enchantments:[{}]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Capacete\",\"color\":\"green\",\"bold\":true}'},slimeboss:1b,Damage:1,Enchantments:[{id:\"minecraft:protection\",lvl:5s},{id:\"minecraft:unbreaking\",lvl:5s}],SkullOwner:{Id:[I;-1165421946,-1396554365,-1516863575,121889550],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTBlNjVlNmU1MTEzYTUxODdkYWQ0NmRmYWQzZDNiZjg1ZThlZjgwN2Y4MmFhYzIyOGE1OWM0YTk1ZDZmNmEifX19\"}]}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 95
+        }
+      ]
+    }
+  ]
+}

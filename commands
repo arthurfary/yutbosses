@@ -1,0 +1,33 @@
+# SPAWN BOSS
+/summon slime ~ ~ ~ {DeathLootTable:"toque_xygel:entities/xygel_boss",Health:1000f,Size:6,CustomName:'{"text":"Xy\'Gel, O Primeiro Slime","color":"green","bold":true}',ArmorItems:[{},{},{},{}],ArmorDropChances:[0.0F,0.0F,0.0F,0.0F],Attributes:[{Name:generic.max_health,Base:1000},{Name:generic.follow_range,Base:40},{Name:generic.movement_speed,Base:0.4},{Name:generic.attack_damage,Base:8}]}
+>
+/scoreboard players set world bossLives 1
+> 
+/bossbar set minecraft:slime players @a[distance=..20]
+
+# BOSS BAR (repeat uncondidional always active)
+/execute if score world bossLives matches 1 store result bossbar minecraft:slime value run data get entity @e[name="Xy'Gel, O Primeiro Slime",limit=1] Health
+
+# TIMER (repeat unconditional always active)
+execute if score world bossLives matches 1 run scoreboard players add world slimetimer 1
+>
+/execute if score world slimetimer matches 400.. run scoreboard players set world slimetimer 0
+
+# ADDS (little slimes) (repeat unconditional always active) # REMEMBER THE COORDINATES NEED TO BE VARIABLES 
+execute if score world slimetimer matches 50 run summon slime -39 -59 -60 {Health:5f,Size:1,Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:1}]}
+>
+/summon slime -39 -59 -60 {Health:5f,Size:1,Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:1}]}
+>
+/summon slime -39 -59 -60 {Health:5f,Size:1,Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:1}]}
+
+# BOSS DEFEAT (repeat unconditional always active)
+execute if score world bossLives matches 1 unless entity @e[name="Xy'Gel, O Primeiro Slime"] run scoreboard players set world bossLives 0
+>
+/bossbar set minecraft:slime players
+
+# CLEANUP (send the slime splited to the void after the big one dies)(repeat unconditional always active) (THIS SHOUDL IDEALY RUN IDEALY ONLY WHEN DE BOSS DIES OR STOP 30 SECONDS AFTER IT DIES) (THIS SHOUDL IDEALY RUN IDEALY ONLY WHEN DE BOSS DIES OR STOP 30 SECONDS AFTER IT DIEs)
+#execute if score world bossLives matches 0 if entity @e[name="Xy'Gel, O Primeiro Slime"] run tp @e[name="Xy'Gel, O Primeiro Slime"] ~ -300 ~
+#
+
+spawn vilager
+/summon villager ~3 -60 ~ {CustomName:'{"text":"Artesão de Slime","color":"green","bold":true}',CustomNameVisible:1b,NoAI:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["slime_trader"],VillagerData:{profession:"minecraft:armorer",level:5,type:"minecraft:swamp"},Offers:{Recipes:[]},Attributes:[{Name:"generic.max_health",Base:1024}]}
