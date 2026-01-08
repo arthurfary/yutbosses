@@ -12,7 +12,7 @@ execute if score @s slime_nucleos matches ..3 run return 0
 clear @s minecraft:slime_ball{slimeboss:1b} 4
 
 # Dá a Espada
-give @s minecraft:iron_sword{display:{Name:'{"text":"Xy\'thar, A Lâmina Viscosa","color":"green","bold":true}',Lore:['{"text":"Toque de Xy\'Gel","italic":false,"color":"gray"}','{"text":""}','{"text":"\\"…Mas ainda não terminamos, Syx\'a. Há coisas que ainda se movem.\\"","color":"gold","italic":true}','{"text":"— Xy\'Gel, O Primeiro Slime, nas Profundezas Estagnadas","color":"gold","italic":true}']},Damage:0,xygel_touch:2b,Enchantments:[{id:"minecraft:sharpness",lvl:8s},{id:"minecraft:unbreaking",lvl:5s}]}
+give @s minecraft:iron_sword{display:{Name:'{"text":"Xy\'thar, A Lâmina Viscosa","color":"green","bold":true}',Lore:['{"text":"Indestrutível","italic":false,"color":"gray"}','{"text":"Toque de Xy\'Gel","italic":false,"color":"gray"}','{"text":""}','{"text":"\\"…Mas ainda não terminamos, Syx\'a. Há coisas que ainda se movem.\\"","color":"gold","italic":true}','{"text":"— Xy\'Gel, O Primeiro Slime, nas Profundezas Estagnadas","color":"gold","italic":true}']},Unbreakable:1b,Damage:0,xygel_touch:2b,Enchantments:[{id:"minecraft:sharpness",lvl:8s}]}
 
 # Efeitos
 particle minecraft:totem_of_undying ~ ~1 ~ 0.5 0.5 0.5 0.1 50 force @a[distance=..32]

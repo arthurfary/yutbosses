@@ -4,14 +4,13 @@
 #
 
 # Spawna os adds DIRETAMENTE (sem chamar outra função)
-execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Name:generic.movement_speed,Base:1.4}{Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3}]}
-execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Name:generic.movement_speed,Base:1.4}{Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3}]}
-execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Name:generic.movement_speed,Base:1.4}{Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3}]}
+execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3},{Name:generic.movement_speed,Base:0.8}]}
+execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3},{Name:generic.movement_speed,Base:0.8}]}
+execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3},{Name:generic.movement_speed,Base:0.8}]}
 
-execute if score #slimeTimer slimeTimer matches 200 at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Name:generic.movement_speed,Base:1.4}{Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3}]}
-execute if score #slimeTimer slimeTimer matches 200 at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Name:generic.movement_speed,Base:1.4}{Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3}]}
-execute if score #slimeTimer slimeTimer matches 200 at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Name:generic.movement_speed,Base:1.4}{Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3}]}
-
+execute if score #slimeTimer slimeTimer matches 200 at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3},{Name:generic.movement_speed,Base:0.8}]}
+execute if score #slimeTimer slimeTimer matches 200 at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3},{Name:generic.movement_speed,Base:0.8}]}
+execute if score #slimeTimer slimeTimer matches 200 at @e[type=slime,tag=xygel_boss,limit=1] run summon slime ~ ~ ~ {Health:20f,Size:1,Tags:["xygel_minion"],Attributes:[{Name:generic.follow_range,Base:35},{Name:generic.attack_damage,Base:3},{Name:generic.movement_speed,Base:0.8}]}
 
 # Efeitos visuais
 #execute if score #slimeTimer slimeTimer matches 400.. at @e[type=slime,tag=xygel_boss,limit=1] run particle minecraft:slime ~ ~1 ~ 0.5 0.5 0.5 0.1 30 force @a[distance=..50]

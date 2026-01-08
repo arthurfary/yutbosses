@@ -16,7 +16,7 @@ execute if score @s slime_nucleos matches ..7 run return 0
 clear @s minecraft:slime_ball{slimeboss:1b} 8
 
 # Dá o Peitoral
-give @s minecraft:leather_chestplate{display:{Name:'{"text":"Peitoral de Slime Primordial","color":"green","bold":true}',color:8439583},slimeboss:1b,Unbreakable:1b,HideFlags:4,Enchantments:[{id:"minecraft:protection",lvl:8s},{id:"minecraft:unbreaking",lvl:5s}]}
+give @s minecraft:leather_chestplate{display:{Name:'{"text":"Peitoral de Slime Primordial","color":"green","bold":true}',color:8439583, Lore:['{"text":"Indestrutível","italic":false,"color":"gray"}']},slimeboss:1b,Unbreakable:1b,HideFlags:4,Lore:['{"text":"Indestrutível","italic":false,"color":"gray"}'],Enchantments:[{id:"minecraft:protection",lvl:8s}]}
 
 # Efeitos
 particle minecraft:totem_of_undying ~ ~1 ~ 0.5 0.5 0.5 0.1 50 force @a[distance=..32]
