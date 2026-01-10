@@ -1,0 +1,22 @@
+# Xy'Gel Craft - Chest Plate (8 nucleos)
+
+execute at @s unless entity @e[type=villager,tag=xygel_trader,distance=..10] run tellraw @s {"text":"❌ Você precisa estar perto do Artesão de Slime!","color":"red"}
+execute at @s unless entity @e[type=villager,tag=xygel_trader,distance=..10] run return 0
+
+execute store result score @s slime_nucleos run clear @s minecraft:slime_ball{slimeboss:1b} 0
+execute if score @s slime_nucleos matches ..7 run tellraw @s {"text":"❌ Núcleos insuficientes! Necessário: 8","color":"red"}
+execute if score @s slime_nucleos matches ..7 run playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 1
+execute if score @s slime_nucleos matches ..7 run return 0
+
+clear @s minecraft:slime_ball{slimeboss:1b} 8
+
+# Give the item using the centralized item function
+function yutbosses:items/bosses/xygel/give_chest
+
+particle minecraft:totem_of_undying ~ ~1 ~ 0.5 0.5 0.5 0.1 50 force @a[distance=..32]
+particle minecraft:happy_villager ~ ~1 ~ 0.3 0.5 0.3 0.1 30 force @a[distance=..32]
+playsound minecraft:entity.villager.yes player @a ~ ~ ~ 1 1
+playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 1 1.2
+execute as @e[type=villager,tag=xygel_trader,distance=..10,limit=1] at @s run particle minecraft:happy_villager ~ ~2 ~ 0.3 0.3 0.3 0 10 force @a[distance=..32]
+
+tellraw @s {"text":"✨ Peitoral de Slime Primordial craftado!","color":"green","bold":true}
